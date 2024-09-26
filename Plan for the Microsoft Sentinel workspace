@@ -1,0 +1,40 @@
+## Microsoft Sentinel Workspace Deployment Options
+
+Before deploying **Microsoft Sentinel**, it's crucial to understand the workspace options. Microsoft Sentinel is installed in a **Log Analytics Workspace**, and many implementation considerations revolve around its creation. The most important factor when creating a new Log Analytics Workspace is the **region**, as it determines where log data will reside.
+
+### Three Deployment Options:
+1. **Single-Tenant with a Single Microsoft Sentinel Workspace**
+2. **Single-Tenant with Regional Microsoft Sentinel Workspaces**
+3. **Multi-Tenant Workspaces**
+
+### Single-Tenant with a Single Workspace
+
+In this option, a single **Microsoft Sentinel Workspace** serves as the central repository for logs across all resources within the same tenant. The workspace can collect logs from resources in different regions within the tenant, but this approach introduces two potential concerns:
+
+- **Bandwidth costs**: Since data travels across regions, there may be extra costs.
+- **Data governance**: If there's a requirement to keep data in a specific region, this may not be a suitable option.
+
+**Pros and Cons of Single-Tenant with a Single Workspace**:
+
+| Pros                                   | Cons                                                 |
+|----------------------------------------|------------------------------------------------------|
+| Centralized view for all security data | May not meet data governance requirements            |
+| Consolidates all security logs         | Bandwidth costs for cross-region data                |
+| Easier to query all information        |                                                      |
+| Azure Log Analytics RBAC for data access control |                                                      |
+| Microsoft Sentinel RBAC for service access control |                                                      |
+
+### Single-Tenant with Regional Workspaces
+
+In this model, multiple **Microsoft Sentinel Workspaces** are created and configured across different regions. Each region requires its own Microsoft Sentinel and Log Analytics workspaces, eliminating cross-region data transfer.
+
+**Pros and Cons of Single-Tenant with Regional Workspaces**:
+
+| Pros                                        | Cons                                                         |
+|---------------------------------------------|--------------------------------------------------------------|
+| No cross-region bandwidth costs             | No centralized view for all security data                     |
+| May meet data governance requirements       | Analytics, workbooks, etc. must be deployed in each region    |
+| Granular data access control                |                                                              |
+| Granular retention settings                 |                                                              |
+| Split billing by region                     |                                                              |
+
