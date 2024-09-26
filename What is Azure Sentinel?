@@ -1,0 +1,22 @@
+## Microsoft Azure Sentinel
+
+**Microsoft Azure Sentinel** is a scalable, cloud-native Security Information and Event Management (SIEM) and Security Orchestration Automated Response (SOAR) solution. It delivers intelligent security analytics and threat intelligence across the enterprise, offering a unified solution for:
+
+- **Alert detection**
+- **Threat visibility**
+- **Proactive hunting**
+- **Threat response**
+
+Azure Sentinel provides a bird's-eye view of your enterprise, alleviating the stress caused by increasingly sophisticated attacks, growing alert volumes, and long resolution times.
+
+### Key Features:
+
+- **Cloud-Scale Data Collection**: Collect data across all users, devices, applications, and infrastructure, both on-premises and in multiple clouds. All ingested data is stored in a Log Analytics workspace.
+  
+- **Advanced Threat Detection**: Detect previously undetected threats and reduce false positives using Microsoft’s analytics and unparalleled threat intelligence.
+
+- **AI-Powered Investigation**: Investigate threats using artificial intelligence, and scale your threat hunting by leveraging years of cybersecurity expertise from Microsoft.
+
+- **Rapid Incident Response**: Respond to incidents quickly with automated playbooks using built-in orchestration and automation for common tasks.
+
+Azure Sentinel builds on the full range of existing Azure services. It natively incorporates proven solutions like **Log Analytics** and **Logic Apps** for executing response playbooks. With AI integration, it enriches your investigations and threat detection capabilities using Microsoft's comprehensive cybersecurity expertise.
